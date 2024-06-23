@@ -17,6 +17,8 @@ function redirectZyneon(goal) {
             window.location.href = apply+"?from=x";
         } else if(goal === "bluesky"||goal === "bsky"||goal === "b") {
             window.location.href = apply+"?from=bluesky";
+        } else if(goal === "instagram"||goal === "i"||goal === "insta") {
+            window.location.href = apply+"?from=instagram";
         } else if(goal === "reddit"||goal === "r") {
             window.location.href = apply+"?from=reddit";
         } else if(goal === "threads"||goal === "t") {
