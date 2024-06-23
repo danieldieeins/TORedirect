@@ -25,7 +25,9 @@ function redirectZyneon(goal) {
             window.location.href = apply+"?from=threads";
         } else if(goal === "discord"||goal === "dc"||goal === "d") {
             window.location.href = apply+"?from=discord";
-        } else if(goal === "website"||goal === "web"||goal === "w"||goal === "s"||goal === "self") {
+        } else if(goal === "website"||goal === "web"||goal === "w") {
+            window.location.href = apply + "?from=website";
+        } else if(goal === "s"||goal === "self") {
             window.location.href = apply+"?from=self";
         } else {
             window.location.href = apply+"?from=other";
