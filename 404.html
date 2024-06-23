@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Resolving... | TORedirect</title>
+    </head>
+    <body>
+        <script>
+            function init() {
+                const currentUrl = new URL(window.location.href);
+                const searchParams = currentUrl.searchParams;
+                if(searchParams.get("s")) {
+                    const s = searchParams.get("s");
+                    if(s==="true"||s===true) {
+                        window.location.href = "https://nerotv.live/404/";
+                    }
+                    return;
+                }
+                const newUrl = 'index.html?' + searchParams.toString();
+                window.location.href = newUrl;
+            } init();
+        </script>
+    </body>
+</html>
