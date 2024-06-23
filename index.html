@@ -5,9 +5,7 @@
         <title>Redirecting... | TORedirect</title>
     </head>
     <script>
-        const url = window.location.href;
         const urlParams = new URLSearchParams(window.location.search);
-
         function init() {
             if(urlParams.get("z")) {
                 redirectZyneon(urlParams.get("z"));
@@ -56,8 +54,6 @@
             } else {
                 window.location.href = "404.html?s=true";
             }
-        }
-
-        init();
+        } init();
     </script>
 </html>
