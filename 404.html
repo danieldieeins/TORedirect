@@ -6,19 +6,10 @@
     </head>
     <body>
         <script>
-            function init() {
-                const currentUrl = new URL(window.location.href);
-                const searchParams = currentUrl.searchParams;
-                if(searchParams.get("s")) {
-                    const s = searchParams.get("s");
-                    if(s==="true"||s===true) {
-                        window.location.href = "https://nerotv.live/404/";
-                    }
-                    return;
-                }
-                const newUrl = 'index.html?' + searchParams.toString();
-                window.location.href = newUrl;
-            } init();
+            const currentUrl = new URL(location.href);
+            const searchParams = currentUrl.searchParams;
+
+            location.href = searchParams.has("s") ? 'index.html?' + searchParams.toString() : "https://nerotvlive.nerofy.de/404";
         </script>
     </body>
 </html>
