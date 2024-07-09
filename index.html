@@ -76,10 +76,21 @@
                 
                 default:
                     return "404.html?s=true";
-            };
-        };
+            }
+        }
+
+        function redirectNero(goal) {
+            goal = goal.toLowerCase();
+            if(goal === "links" || goal === "linktree" || goal === "linklist" || goal === "link" || goal === "l") {
+                return "https://nerotvlive.nerofy.de/links";
+            }
+        }
 
         const urlParams = new URLSearchParams(location.search);
-        location.href = urlParams.has("z") ? redirectZyneon(urlParams.get("z")) : "404.html?s=true";
+        if(urlParams.has("n")) {
+            location.href = redirectNero(urlParams.get("n"));
+        } else {
+            location.href = urlParams.has("z") ? redirectZyneon(urlParams.get("z")) : "404.html?s=true";
+        }
     </script>
 </html>
