@@ -52,7 +52,7 @@
 
                     default:
                         return url_prefix + "other";
-                };
+                }
             }
 
             if(/^pr(ojects)?(d)(c|iscord)?$/.test(goal)) {
@@ -70,9 +70,16 @@
                     return "https://pictures.zyneonstudios.com";
 
                 case "nexus":
+                case "nex":
                 case "ne":
                 case "n":
                     return "https://nexus.zyneonstudios.com";
+
+                case "nexZyD":
+                    return "https://nexus.zyneonstudios.com/docs/zyneonplus/"
+
+                case "nexZyB":
+                    return "https://nexus.zyneonstudios.com/docs/zyneonplus/how-to-install.html"
                 
                 default:
                     return "404.html?s=true";
